@@ -129,13 +129,19 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="median.cpp" />
     <ClCompile Include="read_hw.cpp" />
+    <ClCompile Include="Str.cpp" />
     <ClCompile Include="Student_info.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core.h" />
     <ClInclude Include="Grad.h" />
     <ClInclude Include="grade.h" />
+    <ClInclude Include="Handle.h" />
+    <ClInclude Include="Lis.h" />
     <ClInclude Include="median.h" />
+    <ClInclude Include="ptr.h" />
+    <ClInclude Include="Ref_handle.h" />
+    <ClInclude Include="Str.h" />
     <ClInclude Include="Student_info.h" />
     <ClInclude Include="Vec.h" />
   </ItemGroup>
