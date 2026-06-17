@@ -15,6 +15,8 @@ public:
 	void make_unique() {}
 	if (*refptr != 1) {
 		--*refptr;
+		refptr = new size_t(1);
+		p = old ? clone(old) : 0; //clone(p)로
 	
 	}
 
@@ -62,7 +64,7 @@ Ptr<T>& Ptr<T>::operator=(const Ptr& rhs) {
 	++*rhs.refptr; //참조 포인터 이동
 
 	//상황에 따라 좌별을 할당 해제하고 포인터 소멸
-	if (--*refptr = 0) {
+	if (--*refptr == 0) {
 		delete refptr;
 		delete  p;
 
@@ -78,7 +80,7 @@ Ptr<T>& Ptr<T>::operator=(const Ptr& rhs) {
 
 template <class T>
 Ptr<T>:: ~Ptr() {
-	if (--*refptr = 0) {
+	if (--*refptr == 0) {
 		delete refptr;
 		delete p;
 	}
